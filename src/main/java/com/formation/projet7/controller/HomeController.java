@@ -33,9 +33,9 @@ public class HomeController {
 	@GetMapping("/access")
 	public ResponseEntity<?> access() {
 		
-		String token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJlcnRvIiwidXNlcklkIjoiMSIsInJvbGUiOiJBZG1pbiJ9.Frk8xv9LycYxvX36w9-dMs1q-v1HJ3JQecKWtRtQnvo";
+		String token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJlcnRvIiwidXNlcklkIjoiMSIsInJvbGUiOiJBZG1pbiJ9.Frk8xv9LycYxvX36w9-dMs1q-v1HJ3JQecKWtRtQnvo";
 		
-		return service.getInformacionBancaria();
+		return service.getInformacionBancaria(token);
 		
 	}
 	
